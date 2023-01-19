@@ -3,16 +3,16 @@ import CakeList from "../components/CakeList";
 
 const MyAppContainer = () => {
 
-    const [victoriaCake, setVictoriaCake] = useState[0];
-    const [teaLoaf, setTeaLoaf] = useState[0];
-    const [carrotCake, setCarrotCake] = useState[0];
+    // const [victoriaCake, setVictoriaCake] = useState[0];
+    // const [teaLoaf, setTeaLoaf] = useState[0];
+    // const [carrotCake, setCarrotCake] = useState[0];
 
     return(
         <>
             <h1>Cakes</h1>
-            <CakeList title={"Victoria Cake"}/>
-            <CakeList title={"Tea Loaf"}/>
-            <CakeList title={"CarrotCake"}/>
+            <CakeList name={"Victoria Sponge"}/>
+            <CakeList name={"Tea Load"}/>
+            <CakeList name={"Carrot Cake"}/>
         </>
     )
 }

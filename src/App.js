@@ -1,12 +1,19 @@
 import './App.css';
-import MyAppContainer from './containers/MyAppContainer'
+import CakeContainer from './containers/CakeContainer'
+import Cakes from './components/Cakes';
+import CakeComponent from './components/CakeComponent';
 
 
 function App() {
   return (
     <>
       <h1>BNTA Bakery</h1>
-      <MyAppContainer/>
+      <CakeContainer/>
+      <CakeComponent/>
+      <Cakes/>
+      <cakeName/>
+      {CakeComponent.Cakes}
+
     </>
   );
 }

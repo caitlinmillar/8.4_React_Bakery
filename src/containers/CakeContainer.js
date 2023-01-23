@@ -1,10 +1,10 @@
-import Cakes from "../components/Cakes";
 import CakeComponent from "../components/CakeComponent";
 import { useState } from "react";
 
 
 const CakeContainer = () => {
-    const cakes = useState[{
+    const [cakes, setCakes] = useState([
+    {
     cakeName: "Victoria Sponge",
     ingredients: [
         "eggs",
@@ -31,35 +31,25 @@ const CakeContainer = () => {
    rating: 3
  },
  {
-cakeName: "Carrot Cake",
-ingredients: [
-"carrots",
-"walnuts",
-"oil",
-"cream cheese",
-"flour",
-"sugar",
-],
-price: 8,
-rating: 5
-}
-]
-
-
-        
-    // const ref = useRef(CakeList)
-    // const [teaLoaf, setTeaLoaf] = useState[0];
-    // const [carrotCake, setCarrotCake] = useState[0];
-
+    cakeName: "Carrot Cake",
+        ingredients: [
+        "carrots",
+        "walnuts",
+        "oil",
+        "cream cheese",
+        "flour",
+        "sugar",
+        ],
+    price: 8,
+    rating: 5
+    }
+    ]);
 
     return(
         <>
-        <Cakes cakes={cakes}/>  
-        
-        {Cakes}
-        {CakeComponent.Cake}
-
-
+        <CakeComponent cakes={cakes[0]}/>
+        <CakeComponent cakes={cakes[1]}/>
+        <CakeComponent cakes={cakes[2]}/>
         </>
     )
 }

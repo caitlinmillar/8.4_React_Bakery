@@ -1,28 +1,31 @@
-import Cake from "./Cakes";
+import { useState } from "react";
 
-const CakeComponent = (cakes) => {
-   
+const CakeComponent = ({cakes}) => {
+    const [cakeName, setCakeName] = useState("");
+    const [ingredients, setIngredients] = useState("");
+    const [rating, setRating] = useState("");
+
+    // const newCake = {
+    //     cakeName: cakeName,
+    //     ingredients: ingredients,
+    //     rating: rating
+    // }
+
+    // const cakeComps = cakes.map((cakes,index) => {
+    //     return <cakes key={index} Cake={cakes}/>
+    // })
+
     return(
         <>
         <cakes/>
-            {/* <h2>{}</h2> */}
-            {/* <p>{CakeList.cakeName}</p>
-            <p>Ingredients: {CakeList.ingredients}</p>
-            <h3>Price is {CakeList.price}</h3>
-            <h3>Rating is {CakeList.rating}</h3> */}
-           
-            {cakes.cakeName}
-    
-            <p>{cakes.cakeName}</p>
+            {CakeComponent}
 
+            
+           
 
         </>
     
     )
-        }
+}
             
-        
-
-
-
 export default CakeComponent;

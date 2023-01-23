@@ -1,6 +1,7 @@
 import CakeComponent from "../components/CakeComponent";
 import { useState } from "react";
-
+// CONTAINERS HAVE STATE, LOGIC AND ENCLOSE THINGS
+// COMPONENTS DO NOT HAVE STATE
 
 const CakeContainer = ({cake}) => {
     const [cakes, setCakes] = useState([
@@ -13,8 +14,8 @@ const CakeContainer = ({cake}) => {
        "self-raising flour",
        "baking powder",
        "milk"
-   ],
-   price: 5,
+    ],
+    price: 5,
     rating: 5
 },
 {
@@ -44,14 +45,25 @@ const CakeContainer = ({cake}) => {
     rating: 5
     }
     ]);
+        
+        /* FOUND A WAY TO RETURN ALL CAKES */
+        const allCakes = cakes.map((cake) =>{
+            return <CakeComponent cake={cake}/>
+        })
+        const ingredientsList = cakes.map((ingredient) =>{
+            return  <CakeComponent ingredient={ingredient}/> 
+        })
 
     return(
         <>
-        {/* cake is a new name for props */}
-        <CakeComponent cake={cakes[0]}/>
+        
+        {/* {ingredientsList} */}
+        {allCakes}
+        
+        {/* cake is a new name for props */} 
+        {/* <CakeComponent cake={cakes[0]}/>
         <CakeComponent cake={cakes[1]}/>
-        <CakeComponent cake={cakes[2]}/>
-
+        <CakeComponent cake={cakes[2]}/> */}
         </>
     )
 }

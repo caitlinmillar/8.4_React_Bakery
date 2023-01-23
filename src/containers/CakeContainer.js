@@ -50,21 +50,37 @@ const CakeContainer = ({cake}) => {
         const allCakes = cakes.map((cake) =>{
             return <CakeComponent cake={cake}/>
         })
-        const ingredientsList = cakes.map((ingredient) =>{
-            return  <CakeComponent ingredient={ingredient}/> 
-        })
+       
 
     return(
         <>
-        
-        {/* {ingredientsList} */}
+        <section>
+                {
+                    cakes.map((cake, index) => {
+                        return(
+                            <div key={index}>
+                                <h3>{cake.cakeName}</h3>
+                                <ul>
+                                    {cake.ingredients.map((ingredient, index) => {
+                                        return(
+                                            <li key={index}>{ingredient}</li>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        )
+                    })
+                }
+            </section>
         {allCakes}
+        
         
         {/* cake is a new name for props */} 
         {/* <CakeComponent cake={cakes[0]}/>
         <CakeComponent cake={cakes[1]}/>
         <CakeComponent cake={cakes[2]}/> */}
         </>
+        
     )
 }
 

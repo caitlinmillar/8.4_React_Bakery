@@ -11,7 +11,7 @@ const CakeComponent = ({cake}) => {
     //     rating: rating
     // }
     const ingredientsList = cake.ingredients.map((ingredient) =>{
-        return <li>{ingredients}</li>
+        return <li>{ingredient}</li>
     })
 
     
@@ -19,9 +19,16 @@ const CakeComponent = ({cake}) => {
     return(
         <>
         <cakes/>
-            {cake.cakes}
+            <p>{cake.cakes}</p>
             <h3>{cake.cakeName}</h3>
+            <h4>
+                {cake.rating}
+            </h4>
+            <h4>
+                ${cake.price}
+            </h4>
            <ul>
+            {/* {cake.ingredients} */}
             {ingredientsList}
            </ul>
 

@@ -2,7 +2,7 @@ import CakeComponent from "../components/CakeComponent";
 import { useState } from "react";
 
 
-const CakeContainer = () => {
+const CakeContainer = ({cake}) => {
     const [cakes, setCakes] = useState([
     {
     cakeName: "Victoria Sponge",
@@ -47,9 +47,11 @@ const CakeContainer = () => {
 
     return(
         <>
-        <CakeComponent cakes={cakes[0]}/>
-        <CakeComponent cakes={cakes[1]}/>
-        <CakeComponent cakes={cakes[2]}/>
+        {/* cake is a new name for props */}
+        <CakeComponent cake={cakes[0]}/>
+        <CakeComponent cake={cakes[1]}/>
+        <CakeComponent cake={cakes[2]}/>
+
         </>
     )
 }

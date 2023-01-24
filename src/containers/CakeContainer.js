@@ -67,12 +67,21 @@ const CakeContainer = ({cake}) => {
                                         )
                                     })}
                                 </ul>
-                            </div>
+                            <section className="cakeCard">
+                                <h4 className="rating">
+                                    rating is {cake.rating}
+                                </h4>
+                                <h4 className="price">
+                                    price is £{cake.price}.00
+                                </h4>
+                            </section>
+                        </div>
                         )
+                        
                     })
                 }
             </section>
-        {allCakes}
+       
         
         
         {/* cake is a new name for props */} 
